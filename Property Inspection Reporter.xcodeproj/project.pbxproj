@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D132E13171CDD4C00CF85D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D132E12171CDD4C00CF85D4 /* UIKit.framework */; };
+		0D132E15171CDD4C00CF85D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D132E14171CDD4C00CF85D4 /* Foundation.framework */; };
+		0D132E17171CDD4C00CF85D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D132E16171CDD4C00CF85D4 /* CoreGraphics.framework */; };
+		0D132E1D171CDD4C00CF85D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D132E1B171CDD4C00CF85D4 /* InfoPlist.strings */; };
+		0D132E1F171CDD4C00CF85D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D132E1E171CDD4C00CF85D4 /* main.m */; };
+		0D132E23171CDD4C00CF85D4 /* UsingViews2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D132E22171CDD4C00CF85D4 /* UsingViews2AppDelegate.m */; };
+		0D132E25171CDD4C00CF85D4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D132E24171CDD4C00CF85D4 /* Default.png */; };
+		0D132E27171CDD4C00CF85D4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D132E26171CDD4C00CF85D4 /* Default@2x.png */; };
+		0D132E29171CDD4C00CF85D4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D132E28171CDD4C00CF85D4 /* Default-568h@2x.png */; };
+		0D132E2C171CDD4C00CF85D4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D132E2A171CDD4C00CF85D4 /* MainStoryboard.storyboard */; };
+		0D132E2F171CDD4C00CF85D4 /* UsingViews2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D132E2E171CDD4C00CF85D4 /* UsingViews2ViewController.m */; };
+		0D31D98E172067950033CC5A /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D31D98D172067950033CC5A /* camera.jpg */; };
+		0D6E254D1726168400161950 /* scrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E254C1726168400161950 /* scrollViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D132E0F171CDD4C00CF85D4 /* Property Inspection Reporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Property Inspection Reporter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D132E12171CDD4C00CF85D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0D132E14171CDD4C00CF85D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0D132E16171CDD4C00CF85D4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0D132E1A171CDD4C00CF85D4 /* Property Inspection Reporter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property Inspection Reporter-Info.plist"; sourceTree = "<group>"; };
+		0D132E1C171CDD4C00CF85D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0D132E1E171CDD4C00CF85D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0D132E20171CDD4C00CF85D4 /* Property Inspection Reporter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Property Inspection Reporter-Prefix.pch"; sourceTree = "<group>"; };
+		0D132E21171CDD4C00CF85D4 /* UsingViews2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsingViews2AppDelegate.h; sourceTree = "<group>"; };
+		0D132E22171CDD4C00CF85D4 /* UsingViews2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsingViews2AppDelegate.m; sourceTree = "<group>"; };
+		0D132E24171CDD4C00CF85D4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0D132E26171CDD4C00CF85D4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0D132E28171CDD4C00CF85D4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0D132E2B171CDD4C00CF85D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0D132E2D171CDD4C00CF85D4 /* UsingViews2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsingViews2ViewController.h; sourceTree = "<group>"; };
+		0D132E2E171CDD4C00CF85D4 /* UsingViews2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsingViews2ViewController.m; sourceTree = "<group>"; };
+		0D31D98D172067950033CC5A /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
+		0D6E254B1726168400161950 /* scrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrollViewController.h; sourceTree = "<group>"; };
+		0D6E254C1726168400161950 /* scrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scrollViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D132E0C171CDD4C00CF85D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D132E13171CDD4C00CF85D4 /* UIKit.framework in Frameworks */,
+				0D132E15171CDD4C00CF85D4 /* Foundation.framework in Frameworks */,
+				0D132E17171CDD4C00CF85D4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D132E06171CDD4C00CF85D4 = {
+			isa = PBXGroup;
+			children = (
+				0D6E254B1726168400161950 /* scrollViewController.h */,
+				0D6E254C1726168400161950 /* scrollViewController.m */,
+				0D132E18171CDD4C00CF85D4 /* Property Inspection Reporter */,
+				0D132E11171CDD4C00CF85D4 /* Frameworks */,
+				0D132E10171CDD4C00CF85D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0D132E10171CDD4C00CF85D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D132E0F171CDD4C00CF85D4 /* Property Inspection Reporter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D132E11171CDD4C00CF85D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D132E12171CDD4C00CF85D4 /* UIKit.framework */,
+				0D132E14171CDD4C00CF85D4 /* Foundation.framework */,
+				0D132E16171CDD4C00CF85D4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D132E18171CDD4C00CF85D4 /* Property Inspection Reporter */ = {
+			isa = PBXGroup;
+			children = (
+				0D132E21171CDD4C00CF85D4 /* UsingViews2AppDelegate.h */,
+				0D132E22171CDD4C00CF85D4 /* UsingViews2AppDelegate.m */,
+				0D132E2A171CDD4C00CF85D4 /* MainStoryboard.storyboard */,
+				0D132E2D171CDD4C00CF85D4 /* UsingViews2ViewController.h */,
+				0D132E2E171CDD4C00CF85D4 /* UsingViews2ViewController.m */,
+				0D132E19171CDD4C00CF85D4 /* Supporting Files */,
+			);
+			path = "Property Inspection Reporter";
+			sourceTree = "<group>";
+		};
+		0D132E19171CDD4C00CF85D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D31D98D172067950033CC5A /* camera.jpg */,
+				0D132E1A171CDD4C00CF85D4 /* Property Inspection Reporter-Info.plist */,
+				0D132E1B171CDD4C00CF85D4 /* InfoPlist.strings */,
+				0D132E1E171CDD4C00CF85D4 /* main.m */,
+				0D132E20171CDD4C00CF85D4 /* Property Inspection Reporter-Prefix.pch */,
+				0D132E24171CDD4C00CF85D4 /* Default.png */,
+				0D132E26171CDD4C00CF85D4 /* Default@2x.png */,
+				0D132E28171CDD4C00CF85D4 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D132E0E171CDD4C00CF85D4 /* Property Inspection Reporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D132E32171CDD4C00CF85D4 /* Build configuration list for PBXNativeTarget "Property Inspection Reporter" */;
+			buildPhases = (
+				0D132E0B171CDD4C00CF85D4 /* Sources */,
+				0D132E0C171CDD4C00CF85D4 /* Frameworks */,
+				0D132E0D171CDD4C00CF85D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Property Inspection Reporter";
+			productName = "Property Inspection Reporter";
+			productReference = 0D132E0F171CDD4C00CF85D4 /* Property Inspection Reporter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D132E07171CDD4C00CF85D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = UsingViews2;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = webstudent;
+			};
+			buildConfigurationList = 0D132E0A171CDD4C00CF85D4 /* Build configuration list for PBXProject "Property Inspection Reporter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0D132E06171CDD4C00CF85D4;
+			productRefGroup = 0D132E10171CDD4C00CF85D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D132E0E171CDD4C00CF85D4 /* Property Inspection Reporter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D132E0D171CDD4C00CF85D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D132E1D171CDD4C00CF85D4 /* InfoPlist.strings in Resources */,
+				0D132E25171CDD4C00CF85D4 /* Default.png in Resources */,
+				0D132E27171CDD4C00CF85D4 /* Default@2x.png in Resources */,
+				0D132E29171CDD4C00CF85D4 /* Default-568h@2x.png in Resources */,
+				0D132E2C171CDD4C00CF85D4 /* MainStoryboard.storyboard in Resources */,
+				0D31D98E172067950033CC5A /* camera.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D132E0B171CDD4C00CF85D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D132E1F171CDD4C00CF85D4 /* main.m in Sources */,
+				0D132E23171CDD4C00CF85D4 /* UsingViews2AppDelegate.m in Sources */,
+				0D132E2F171CDD4C00CF85D4 /* UsingViews2ViewController.m in Sources */,
+				0D6E254D1726168400161950 /* scrollViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0D132E1B171CDD4C00CF85D4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D132E1C171CDD4C00CF85D4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0D132E2A171CDD4C00CF85D4 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D132E2B171CDD4C00CF85D4 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0D132E30171CDD4C00CF85D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0D132E31171CDD4C00CF85D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0D132E33171CDD4C00CF85D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Property Inspection Reporter/Property Inspection Reporter-Prefix.pch";
+				INFOPLIST_FILE = "Property Inspection Reporter/Property Inspection Reporter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0D132E34171CDD4C00CF85D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Property Inspection Reporter/Property Inspection Reporter-Prefix.pch";
+				INFOPLIST_FILE = "Property Inspection Reporter/Property Inspection Reporter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D132E0A171CDD4C00CF85D4 /* Build configuration list for PBXProject "Property Inspection Reporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D132E30171CDD4C00CF85D4 /* Debug */,
+				0D132E31171CDD4C00CF85D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D132E32171CDD4C00CF85D4 /* Build configuration list for PBXNativeTarget "Property Inspection Reporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D132E33171CDD4C00CF85D4 /* Debug */,
+				0D132E34171CDD4C00CF85D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D132E07171CDD4C00CF85D4 /* Project object */;
+}
