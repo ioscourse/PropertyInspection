@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" id="9Pg-Gr-wge">
-                                <rect key="frame" x="0.0" y="-289" width="571" height="1786"/>
+                                <rect key="frame" x="-3" y="0.0" width="571" height="1786"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Property Inspection Report" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mbI-Mb-i8s">
                                         <rect key="frame" x="168" y="27" width="245" height="21"/>
@@ -129,6 +129,10 @@
                                         <rect key="frame" x="242" y="305" width="88" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="2" eventType="editingDidEnd" id="sYF-2z-ZrC"/>
+                                            <outlet property="delegate" destination="2" id="NUw-WF-3Qb"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bzv-AA-BrB">
                                         <rect key="frame" x="168" y="276" width="67" height="21"/>
@@ -166,10 +170,6 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="ZeN-Ar-lJs">
-                                        <rect key="frame" x="87" y="414" width="79" height="27"/>
-                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.74999999999999978" height="0.74999999999999978"/>
-                                    </switch>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Meter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IHE-vD-rvU">
                                         <rect key="frame" x="190" y="420" width="50" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -192,6 +192,10 @@
                                         <rect key="frame" x="94" y="443" width="78" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="2" eventType="editingDidEnd" id="sQf-PK-JEb"/>
+                                            <outlet property="delegate" destination="2" id="dyh-Ib-axx"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Photo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U5O-qq-1Wl">
                                         <rect key="frame" x="512" y="420" width="46" height="21"/>
@@ -220,9 +224,6 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="oUG-3t-V5m">
-                                        <rect key="frame" x="63" y="485" width="79" height="27"/>
-                                    </switch>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Meter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t9B-Gc-o1M">
                                         <rect key="frame" x="190" y="491" width="48" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -257,11 +258,19 @@
                                         <rect key="frame" x="94" y="515" width="78" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="2" eventType="editingDidEnd" id="6h0-IB-IVw"/>
+                                            <outlet property="delegate" destination="2" id="ilj-H0-G0o"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="DJg-Cb-WuS">
                                         <rect key="frame" x="87" y="604" width="93" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="2" eventType="editingDidEnd" id="WEc-0V-rIM"/>
+                                            <outlet property="delegate" destination="2" id="nlq-7B-Tv6"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Photo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pgC-Cg-rfV">
                                         <rect key="frame" x="512" y="491" width="49" height="21"/>
@@ -581,9 +590,6 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="p6g-mW-h4f">
-                                        <rect key="frame" x="77" y="562" width="79" height="27"/>
-                                    </switch>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Meter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fdn-Ew-mZF">
                                         <rect key="frame" x="190" y="557" width="50" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -603,6 +609,9 @@
                                             <segment title="Y"/>
                                             <segment title="N"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="btnSale:" destination="2" eventType="valueChanged" id="dSa-Qw-hM5"/>
+                                        </connections>
                                     </segmentedControl>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="BH1-jj-5Uu">
                                         <rect key="frame" x="242" y="215" width="71" height="44"/>
@@ -675,7 +684,7 @@
                                         </segments>
                                     </segmentedControl>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="yRu-GS-fr1">
-                                        <rect key="frame" x="393" y="473" width="71" height="44"/>
+                                        <rect key="frame" x="393" y="469" width="71" height="44"/>
                                         <segments>
                                             <segment title="Y"/>
                                             <segment title="N"/>
@@ -930,16 +939,28 @@
                                         <rect key="frame" x="281" y="736" width="200" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="2" eventType="editingDidEnd" id="A8F-Fb-YJc"/>
+                                            <outlet property="delegate" destination="2" id="3uE-Zq-IgS"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="moC-l6-mOP">
                                         <rect key="frame" x="338" y="844" width="143" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="2" eventType="editingDidEnd" id="62Z-JC-iV8"/>
+                                            <outlet property="delegate" destination="2" id="axt-0L-vex"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="971-xH-F4P">
                                         <rect key="frame" x="256" y="1003" width="225" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="2" eventType="editingDidEnd" id="hHM-eH-aU3"/>
+                                            <outlet property="delegate" destination="2" id="3pS-da-KQF"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="If previously vacant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jqq-7t-1uy">
                                         <rect key="frame" x="347" y="942" width="153" height="21"/>
@@ -963,22 +984,59 @@
                                         <rect key="frame" x="261" y="1328" width="220" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="2" eventType="editingDidEnd" id="J0w-tq-oT6"/>
+                                            <outlet property="delegate" destination="2" id="ajL-pN-Pu1"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="z6V-de-ZSs">
                                         <rect key="frame" x="261" y="1382" width="220" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="2" eventType="editingDidEnd" id="1e9-Bw-2ZI"/>
+                                            <outlet property="delegate" destination="2" id="zbM-bf-vao"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="4dw-5u-uJ1">
                                         <rect key="frame" x="63" y="1464" width="429" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="2" eventType="editingDidEnd" id="hYR-aI-r3M"/>
+                                            <outlet property="delegate" destination="2" id="HMg-01-Ju7"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Alz-Mx-6SE">
                                         <rect key="frame" x="63" y="1520" width="429" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="2" eventType="editingDidEnd" id="d51-BE-SaS"/>
+                                            <outlet property="delegate" destination="2" id="z71-qF-Qq9"/>
+                                        </connections>
                                     </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="ZpC-D3-yzy">
+                                        <rect key="frame" x="94" y="402" width="71" height="44"/>
+                                        <segments>
+                                            <segment title="Y"/>
+                                            <segment title="N"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="PiD-AF-zOV">
+                                        <rect key="frame" x="94" y="473" width="71" height="44"/>
+                                        <segments>
+                                            <segment title="Y"/>
+                                            <segment title="N"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Mc3-UZ-hc1">
+                                        <rect key="frame" x="87" y="557" width="71" height="44"/>
+                                        <segments>
+                                            <segment title="Y"/>
+                                            <segment title="N"/>
+                                        </segments>
+                                    </segmentedControl>
                                 </subviews>
                                 <connections>
                                     <outlet property="delegate" destination="2" id="27d-CX-viC"/>
@@ -997,10 +1055,21 @@
                         <outlet property="scrollview" destination="9Pg-Gr-wge" id="RHm-YK-jyF"/>
                         <outlet property="txtAddress" destination="ytO-b9-lse" id="KDa-Cs-CQd"/>
                         <outlet property="txtCity" destination="SaY-0B-OEw" id="VrV-9a-Op7"/>
+                        <outlet property="txtDoorlocation" destination="s7E-oq-mSo" id="tNb-7x-4cC"/>
+                        <outlet property="txtGasread" destination="Vm0-RK-008" id="9pC-7Y-2J4"/>
+                        <outlet property="txtHazards" destination="Alz-Mx-6SE" id="xNN-nD-Ccz"/>
                         <outlet property="txtInspector" destination="psd-Y2-dk2" id="gcP-aX-7RG"/>
+                        <outlet property="txtLawn" destination="Q4P-59-SZX" id="5wp-RG-468"/>
                         <outlet property="txtLockboxCode" destination="X4j-W9-eDO" id="tIM-Tq-SAb"/>
                         <outlet property="txtLockboxLoc" destination="fCX-p1-n8o" id="dbi-HO-bF9"/>
+                        <outlet property="txtMissing" destination="4dw-5u-uJ1" id="CZX-ck-nWp"/>
+                        <outlet property="txtMold" destination="971-xH-F4P" id="ntX-Mm-JM2"/>
+                        <outlet property="txtSnow" destination="z6V-de-ZSs" id="8Kp-lI-aq2"/>
                         <outlet property="txtState" destination="EJH-EK-hM1" id="oqL-jA-CaA"/>
+                        <outlet property="txtUtilread" destination="Org-il-4sf" id="VPi-xQ-bn6"/>
+                        <outlet property="txtWaterread" destination="DJg-Cb-WuS" id="ujk-Tc-520"/>
+                        <outlet property="txtWindow" destination="moC-l6-mOP" id="Dxf-11-GmY"/>
+                        <outlet property="viewSale" destination="7Cn-2m-0FO" id="N0N-zb-F6Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -1028,14 +1097,26 @@
         <class className="UsingViews2ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UsingViews2ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="btnSale:"/>
                 <relationship kind="action" name="doneEditing:"/>
                 <relationship kind="outlet" name="scrollview" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="txtAddress" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="txtCity" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtDoorlocation" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtGasread" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtHazards" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="txtInspector" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtLawn" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="txtLockboxCode" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="txtLockboxLoc" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtMissing" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtMold" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtSnow" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="txtState" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtUtilread" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtWaterread" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtWindow" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="viewSale" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
     </classes>

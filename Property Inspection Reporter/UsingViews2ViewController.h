@@ -20,6 +20,21 @@
 @property (retain, nonatomic) IBOutlet UITextField *txtInspector;
 @property (retain, nonatomic) IBOutlet UITextField *txtLockboxLoc;
 @property (retain, nonatomic) IBOutlet UITextField *txtLockboxCode;
+@property (retain, nonatomic) IBOutlet UITextField *txtUtilread;
+@property (retain, nonatomic) IBOutlet UITextField *txtGasread;
+@property (retain, nonatomic) IBOutlet UITextField *txtWaterread;
+@property (retain, nonatomic) IBOutlet UITextField *txtDoorlocation;
+@property (retain, nonatomic) IBOutlet UITextField *txtWindow;
+@property (retain, nonatomic) IBOutlet UITextField *txtMold;
+@property (retain, nonatomic) IBOutlet UITextField *txtLawn;
+@property (retain, nonatomic) IBOutlet UITextField *txtSnow;
+@property (retain, nonatomic) IBOutlet UITextField *txtMissing;
+@property (retain, nonatomic) IBOutlet UITextField *txtHazards;
+
+
+@property (retain, nonatomic) IBOutlet UISegmentedControl *viewSale;
+- (IBAction)btnSale:(id)sender;
+
     
 
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollview;

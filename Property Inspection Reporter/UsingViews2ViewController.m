@@ -20,6 +20,19 @@
 @synthesize txtInspector;
 @synthesize txtLockboxCode;
 @synthesize txtLockboxLoc;
+@synthesize txtUtilread;
+@synthesize txtGasread;
+@synthesize txtWaterread;
+@synthesize txtDoorlocation;
+@synthesize txtWindow;
+@synthesize txtMold;
+@synthesize txtLawn;
+@synthesize txtSnow;
+@synthesize txtMissing;
+@synthesize txtHazards;
+@synthesize viewSale;
+
+
 
 - (void)viewDidLoad
 {
@@ -40,6 +53,16 @@
     [txtInspector resignFirstResponder];
     [txtLockboxLoc resignFirstResponder];
     [txtInspector resignFirstResponder];
+    [txtUtilread resignFirstResponder];
+    [txtGasread resignFirstResponder];
+    [txtWaterread resignFirstResponder];
+    [txtDoorlocation resignFirstResponder];
+    [txtWindow resignFirstResponder];
+    [txtMold resignFirstResponder];
+    [txtLawn resignFirstResponder];
+    [txtSnow resignFirstResponder];
+    [txtMissing resignFirstResponder];
+    [txtHazards resignFirstResponder];
     
 }
 -(IBAction) doneEditing:(id) sender {
@@ -59,6 +82,17 @@
     [txtInspector release];
     [txtLockboxLoc release];
     [txtLockboxCode release];
+    [txtUtilread release];
+    [txtGasread release];
+    [txtWaterread release];
+    [txtDoorlocation release];
+    [txtWindow release];
+    [txtMold release];
+    [txtLawn release];
+    [txtSnow release];
+    [txtMissing release];
+    [txtHazards release];
+    [viewSale release];
     [super dealloc];
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
@@ -75,5 +109,7 @@
 - (void)textViewDidEndEditing:(UITextView *)textView {
     [scrollview setContentOffset:CGPointZero animated:YES];
 }
-
+- (IBAction)btnSale:(id)sender {
+    NSLog(@"%ld", (long)viewSale.selectedSegmentIndex);
+}
 @end
