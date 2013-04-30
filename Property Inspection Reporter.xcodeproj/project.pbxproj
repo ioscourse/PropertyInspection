@@ -20,6 +20,8 @@
 		0D132E2F171CDD4C00CF85D4 /* UsingViews2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D132E2E171CDD4C00CF85D4 /* UsingViews2ViewController.m */; };
 		0D31D98E172067950033CC5A /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D31D98D172067950033CC5A /* camera.jpg */; };
 		0D6E254D1726168400161950 /* scrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E254C1726168400161950 /* scrollViewController.m */; };
+		665872AA172F607700A6F8D2 /* s57_mzl.fkqcjkaa.png in Resources */ = {isa = PBXBuildFile; fileRef = 665872A9172F607700A6F8D2 /* s57_mzl.fkqcjkaa.png */; };
+		665872AC172F60E600A6F8D2 /* s114_mzl.fkqcjkaa.png in Resources */ = {isa = PBXBuildFile; fileRef = 665872AB172F60E600A6F8D2 /* s114_mzl.fkqcjkaa.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		0D31D98D172067950033CC5A /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 		0D6E254B1726168400161950 /* scrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrollViewController.h; sourceTree = "<group>"; };
 		0D6E254C1726168400161950 /* scrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scrollViewController.m; sourceTree = "<group>"; };
+		665872A9172F607700A6F8D2 /* s57_mzl.fkqcjkaa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s57_mzl.fkqcjkaa.png; sourceTree = "<group>"; };
+		665872AB172F60E600A6F8D2 /* s114_mzl.fkqcjkaa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s114_mzl.fkqcjkaa.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 		0D132E06171CDD4C00CF85D4 = {
 			isa = PBXGroup;
 			children = (
+				665872AB172F60E600A6F8D2 /* s114_mzl.fkqcjkaa.png */,
+				665872A9172F607700A6F8D2 /* s57_mzl.fkqcjkaa.png */,
 				0D6E254B1726168400161950 /* scrollViewController.h */,
 				0D6E254C1726168400161950 /* scrollViewController.m */,
 				0D132E18171CDD4C00CF85D4 /* Property Inspection Reporter */,
@@ -173,6 +179,8 @@
 				0D132E29171CDD4C00CF85D4 /* Default-568h@2x.png in Resources */,
 				0D132E2C171CDD4C00CF85D4 /* MainStoryboard.storyboard in Resources */,
 				0D31D98E172067950033CC5A /* camera.jpg in Resources */,
+				665872AA172F607700A6F8D2 /* s57_mzl.fkqcjkaa.png in Resources */,
+				665872AC172F60E600A6F8D2 /* s114_mzl.fkqcjkaa.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
