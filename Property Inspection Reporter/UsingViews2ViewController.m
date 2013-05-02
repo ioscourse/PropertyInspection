@@ -13,6 +13,7 @@
 @end
 
 @implementation UsingViews2ViewController
+
 @synthesize scrollview;
 @synthesize txtAddress;
 @synthesize txtCity;
@@ -31,7 +32,41 @@
 @synthesize txtMissing;
 @synthesize txtHazards;
 @synthesize viewSale;
-
+@synthesize viewSign;
+@synthesize viewName;
+@synthesize viewAgency;
+@synthesize viewLockbox;
+@synthesize viewKeys;
+@synthesize viewSignin;
+@synthesize viewAgencyinfo;
+@synthesize viewElectric;
+@synthesize viewElecmeter;
+@synthesize viewEleclocked;
+@synthesize viewGas;
+@synthesize viewGasmeter;
+@synthesize viewGaslocked;
+@synthesize viewWater;
+@synthesize viewWatermeter;
+@synthesize viewWinterized;
+@synthesize viewWell;
+@synthesize viewSeptic;
+@synthesize viewHeater;
+@synthesize viewWinter;
+@synthesize viewSummer;
+@synthesize viewDoorssecure;
+@synthesize viewBasement;
+@synthesize viewSump;
+@synthesize viewOperating;
+@synthesize viewBrokenWindows;
+@synthesize viewLeak;
+@synthesize viewSquatters;
+@synthesize viewTenants;
+@synthesize viewMold;
+@synthesize viewTrashout;
+@synthesize viewViolations;
+@synthesize viewLawn;
+@synthesize viewSnow;
+@synthesize viewCleanservice;
 
 
 - (void)viewDidLoad
@@ -93,6 +128,41 @@
     [txtMissing release];
     [txtHazards release];
     [viewSale release];
+    [viewSign release];
+    [viewName release];
+    [viewAgency release];
+    [viewLockbox release];
+    [viewKeys release];
+    [viewSignin release];
+    [viewAgencyinfo release];
+    [viewElectric release];
+    [viewElecmeter release];
+    [viewEleclocked release];
+    [viewGas release];
+    [viewGasmeter release];
+    [viewGaslocked release];
+    [viewWater release];
+    [viewWatermeter release];
+    [viewWinterized release];
+    [viewWell release];
+    [viewSeptic release];
+    [viewHeater release];
+    [viewWinter release];
+    [viewSummer release];
+    [viewDoorssecure release];
+    [viewBasement release];
+    [viewSump release];
+    [viewOperating release];
+    [viewBrokenWindows release];
+    [viewLeak release];
+    [viewSquatters release];
+    [viewTenants release];
+    [viewMold release];
+    [viewCleanservice release];
+    [viewTrashout release];
+    [viewViolations release];
+    [viewLawn release];
+    [viewSnow release];
     [super dealloc];
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
@@ -112,4 +182,112 @@
 - (IBAction)btnSale:(id)sender {
     NSLog(@"%ld", (long)viewSale.selectedSegmentIndex);
 }
+- (IBAction)btnSign:(id)sender {
+    NSLog(@"%ld", (long)viewSign.selectedSegmentIndex);
+}
+- (IBAction)btnName:(id)sender {
+    NSLog(@"%ld", (long)viewName.selectedSegmentIndex);
+}
+- (IBAction)btnAgency:(id)sender {
+    NSLog(@"%ld", (long)viewAgency.selectedSegmentIndex);
+}
+- (IBAction)btnLockbox:(id)sender {
+    NSLog(@"%ld", (long)viewLockbox.selectedSegmentIndex);
+}
+- (IBAction)btnKeys:(id)sender {
+    NSLog(@"%ld", (long)viewKeys.selectedSegmentIndex);
+}
+- (IBAction)btnSignin:(id)sender {
+    NSLog(@"%ld", (long)viewSignin.selectedSegmentIndex);
+}
+- (IBAction)btnAgencyinfo:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnElectric:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnElecmeter:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnEleclocked:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnGas:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnGasmeter:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnGaslocked:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnWater:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnWatermeter:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnWinterized:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnWell:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnSeptic:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnHeater:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnWinter:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnSummer:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnDoorssecure:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnBasement:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnSump:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnBrokenWindows:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnLeak:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnSquatters:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnTenants:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnMold:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnCleanservice:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnTrashout:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnViolations:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnLawn:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnSnow:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+- (IBAction)btnOperating:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+
+
+
 @end

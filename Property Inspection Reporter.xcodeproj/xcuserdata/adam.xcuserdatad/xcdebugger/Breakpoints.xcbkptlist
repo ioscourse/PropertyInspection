@@ -8,12 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Property Inspection Reporter/UsingViews2ViewController.m"
-         timestampString = "389041885.464662"
+         timestampString = "389139970.090437"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
-         landmarkName = "@synthesize viewSale - (void)viewDidLoad { [super viewDidLoad];"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
+         landmarkName = "viewSale"
          landmarkType = "19">
       </FileBreakpoint>
    </FileBreakpoints>
