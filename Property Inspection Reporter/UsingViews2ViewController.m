@@ -56,17 +56,17 @@
 @synthesize viewDoorssecure;
 @synthesize viewBasement;
 @synthesize viewSump;
-@synthesize viewOperating;
+@synthesize viewOperate;
 @synthesize viewBrokenWindows;
 @synthesize viewLeak;
 @synthesize viewSquatters;
 @synthesize viewTenants;
 @synthesize viewMold;
+@synthesize viewCleanservice;
 @synthesize viewTrashout;
 @synthesize viewViolations;
 @synthesize viewLawn;
 @synthesize viewSnow;
-@synthesize viewCleanservice;
 
 
 - (void)viewDidLoad
@@ -152,7 +152,7 @@
     [viewDoorssecure release];
     [viewBasement release];
     [viewSump release];
-    [viewOperating release];
+    [viewOperate release];
     [viewBrokenWindows release];
     [viewLeak release];
     [viewSquatters release];
@@ -163,6 +163,7 @@
     [viewViolations release];
     [viewLawn release];
     [viewSnow release];
+    
     [super dealloc];
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
@@ -254,6 +255,9 @@
 - (IBAction)btnSump:(id)sender {
     NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
 }
+- (IBAction)btnOperate:(id)sender {
+    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
 - (IBAction)btnBrokenWindows:(id)sender {
     NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
 }
@@ -284,10 +288,6 @@
 - (IBAction)btnSnow:(id)sender {
     NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
 }
-- (IBAction)btnOperating:(id)sender {
-    NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
-}
-
 
 
 @end

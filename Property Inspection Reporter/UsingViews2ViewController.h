@@ -82,8 +82,8 @@
 - (IBAction)btnBasement:(id)sender;
 @property (retain, nonatomic) IBOutlet UISegmentedControl *viewSump;
 - (IBAction)btnSump:(id)sender;
-@property (retain, nonatomic) IBOutlet UISegmentedControl *viewOperating;
-- (IBAction)btnOperating:(id)sender;
+@property (retain, nonatomic) IBOutlet UISegmentedControl *viewOperate;
+- (IBAction)btnOperate:(id)sender;
 @property (retain, nonatomic) IBOutlet UISegmentedControl *viewBrokenWindows;
 - (IBAction)btnBrokenWindows:(id)sender;
 @property (retain, nonatomic) IBOutlet UISegmentedControl *viewLeak;
