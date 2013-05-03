@@ -22,6 +22,13 @@
 		0D6E254D1726168400161950 /* scrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6E254C1726168400161950 /* scrollViewController.m */; };
 		665872AA172F607700A6F8D2 /* s57_mzl.fkqcjkaa.png in Resources */ = {isa = PBXBuildFile; fileRef = 665872A9172F607700A6F8D2 /* s57_mzl.fkqcjkaa.png */; };
 		665872AC172F60E600A6F8D2 /* s114_mzl.fkqcjkaa.png in Resources */ = {isa = PBXBuildFile; fileRef = 665872AB172F60E600A6F8D2 /* s114_mzl.fkqcjkaa.png */; };
+		669B70BB17328E4C00450837 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70BA17328E4C00450837 /* AVFoundation.framework */; };
+		669B70BD17328E7D00450837 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70BC17328E7D00450837 /* ImageIO.framework */; };
+		669B70BF1732911C00450837 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70BE1732911C00450837 /* CoreMedia.framework */; };
+		669B70C11732915E00450837 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70C01732915E00450837 /* MediaPlayer.framework */; };
+		669B70C31732959D00450837 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70C21732959D00450837 /* QuartzCore.framework */; };
+		669B70C5173295B500450837 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70C4173295B500450837 /* Security.framework */; };
+		669B70C71732961700450837 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70C61732961700450837 /* DropboxSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +53,13 @@
 		0D6E254C1726168400161950 /* scrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scrollViewController.m; sourceTree = "<group>"; };
 		665872A9172F607700A6F8D2 /* s57_mzl.fkqcjkaa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s57_mzl.fkqcjkaa.png; sourceTree = "<group>"; };
 		665872AB172F60E600A6F8D2 /* s114_mzl.fkqcjkaa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s114_mzl.fkqcjkaa.png; sourceTree = "<group>"; };
+		669B70BA17328E4C00450837 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		669B70BC17328E7D00450837 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		669B70BE1732911C00450837 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		669B70C01732915E00450837 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		669B70C21732959D00450837 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		669B70C4173295B500450837 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		669B70C61732961700450837 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = "../../Documents/IOS/dropbox-ios-sdk-1.3.4/DropboxSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +67,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669B70C71732961700450837 /* DropboxSDK.framework in Frameworks */,
+				669B70C5173295B500450837 /* Security.framework in Frameworks */,
+				669B70C31732959D00450837 /* QuartzCore.framework in Frameworks */,
+				669B70C11732915E00450837 /* MediaPlayer.framework in Frameworks */,
+				669B70BF1732911C00450837 /* CoreMedia.framework in Frameworks */,
+				669B70BD17328E7D00450837 /* ImageIO.framework in Frameworks */,
+				669B70BB17328E4C00450837 /* AVFoundation.framework in Frameworks */,
 				0D132E13171CDD4C00CF85D4 /* UIKit.framework in Frameworks */,
 				0D132E15171CDD4C00CF85D4 /* Foundation.framework in Frameworks */,
 				0D132E17171CDD4C00CF85D4 /* CoreGraphics.framework in Frameworks */,
@@ -86,6 +107,13 @@
 		0D132E11171CDD4C00CF85D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				669B70C61732961700450837 /* DropboxSDK.framework */,
+				669B70C4173295B500450837 /* Security.framework */,
+				669B70C21732959D00450837 /* QuartzCore.framework */,
+				669B70C01732915E00450837 /* MediaPlayer.framework */,
+				669B70BE1732911C00450837 /* CoreMedia.framework */,
+				669B70BA17328E4C00450837 /* AVFoundation.framework */,
+				669B70BC17328E7D00450837 /* ImageIO.framework */,
 				0D132E12171CDD4C00CF85D4 /* UIKit.framework */,
 				0D132E14171CDD4C00CF85D4 /* Foundation.framework */,
 				0D132E16171CDD4C00CF85D4 /* CoreGraphics.framework */,
@@ -277,6 +305,10 @@
 		0D132E33171CDD4C00CF85D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/IOS/dropbox-ios-sdk-1.3.4\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Property Inspection Reporter/Property Inspection Reporter-Prefix.pch";
 				INFOPLIST_FILE = "Property Inspection Reporter/Property Inspection Reporter-Info.plist";
@@ -290,6 +322,10 @@
 		0D132E34171CDD4C00CF85D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/IOS/dropbox-ios-sdk-1.3.4\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Property Inspection Reporter/Property Inspection Reporter-Prefix.pch";
 				INFOPLIST_FILE = "Property Inspection Reporter/Property Inspection Reporter-Info.plist";

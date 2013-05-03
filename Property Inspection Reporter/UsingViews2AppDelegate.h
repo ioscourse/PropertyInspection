@@ -11,5 +11,6 @@
 @interface UsingViews2AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
 
 @end
