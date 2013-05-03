@@ -29,6 +29,12 @@
 		669B70C31732959D00450837 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70C21732959D00450837 /* QuartzCore.framework */; };
 		669B70C5173295B500450837 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70C4173295B500450837 /* Security.framework */; };
 		669B70C71732961700450837 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70C61732961700450837 /* DropboxSDK.framework */; };
+		669B70CB17340CBC00450837 /* PDFRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 669B70CA17340CBC00450837 /* PDFRenderer.m */; };
+		669B70CD173448E300450837 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70CC173448E200450837 /* CoreLocation.framework */; };
+		669B70CF1734495400450837 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70CE1734495400450837 /* CoreData.framework */; };
+		669B70D117344A5C00450837 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70D017344A5C00450837 /* CFNetwork.framework */; };
+		669B70D317344A8000450837 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70D217344A8000450837 /* MessageUI.framework */; };
+		669B70D517344A9600450837 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669B70D417344A9600450837 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,13 @@
 		669B70C21732959D00450837 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		669B70C4173295B500450837 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		669B70C61732961700450837 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = "../../Documents/IOS/dropbox-ios-sdk-1.3.4/DropboxSDK.framework"; sourceTree = "<group>"; };
+		669B70C917340CBC00450837 /* PDFRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFRenderer.h; sourceTree = "<group>"; };
+		669B70CA17340CBC00450837 /* PDFRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFRenderer.m; sourceTree = "<group>"; };
+		669B70CC173448E200450837 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		669B70CE1734495400450837 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		669B70D017344A5C00450837 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		669B70D217344A8000450837 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		669B70D417344A9600450837 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +80,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669B70D517344A9600450837 /* MobileCoreServices.framework in Frameworks */,
+				669B70D317344A8000450837 /* MessageUI.framework in Frameworks */,
+				669B70D117344A5C00450837 /* CFNetwork.framework in Frameworks */,
+				669B70CF1734495400450837 /* CoreData.framework in Frameworks */,
+				669B70BF1732911C00450837 /* CoreMedia.framework in Frameworks */,
+				669B70CD173448E300450837 /* CoreLocation.framework in Frameworks */,
 				669B70C71732961700450837 /* DropboxSDK.framework in Frameworks */,
 				669B70C5173295B500450837 /* Security.framework in Frameworks */,
 				669B70C31732959D00450837 /* QuartzCore.framework in Frameworks */,
 				669B70C11732915E00450837 /* MediaPlayer.framework in Frameworks */,
-				669B70BF1732911C00450837 /* CoreMedia.framework in Frameworks */,
 				669B70BD17328E7D00450837 /* ImageIO.framework in Frameworks */,
 				669B70BB17328E4C00450837 /* AVFoundation.framework in Frameworks */,
 				0D132E13171CDD4C00CF85D4 /* UIKit.framework in Frameworks */,
@@ -86,6 +104,7 @@
 		0D132E06171CDD4C00CF85D4 = {
 			isa = PBXGroup;
 			children = (
+				669B70C817340C7E00450837 /* createPDF */,
 				665872AB172F60E600A6F8D2 /* s114_mzl.fkqcjkaa.png */,
 				665872A9172F607700A6F8D2 /* s57_mzl.fkqcjkaa.png */,
 				0D6E254B1726168400161950 /* scrollViewController.h */,
@@ -107,6 +126,11 @@
 		0D132E11171CDD4C00CF85D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				669B70D417344A9600450837 /* MobileCoreServices.framework */,
+				669B70D217344A8000450837 /* MessageUI.framework */,
+				669B70D017344A5C00450837 /* CFNetwork.framework */,
+				669B70CE1734495400450837 /* CoreData.framework */,
+				669B70CC173448E200450837 /* CoreLocation.framework */,
 				669B70C61732961700450837 /* DropboxSDK.framework */,
 				669B70C4173295B500450837 /* Security.framework */,
 				669B70C21732959D00450837 /* QuartzCore.framework */,
@@ -147,6 +171,15 @@
 				0D132E28171CDD4C00CF85D4 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		669B70C817340C7E00450837 /* createPDF */ = {
+			isa = PBXGroup;
+			children = (
+				669B70C917340CBC00450837 /* PDFRenderer.h */,
+				669B70CA17340CBC00450837 /* PDFRenderer.m */,
+			);
+			name = createPDF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +256,7 @@
 				0D132E23171CDD4C00CF85D4 /* UsingViews2AppDelegate.m in Sources */,
 				0D132E2F171CDD4C00CF85D4 /* UsingViews2ViewController.m in Sources */,
 				0D6E254D1726168400161950 /* scrollViewController.m in Sources */,
+				669B70CB17340CBC00450837 /* PDFRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

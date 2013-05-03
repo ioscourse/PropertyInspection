@@ -7,6 +7,7 @@
 //
 
 #import "UsingViews2ViewController.h"
+#import "PDFRenderer.h"
 
 @interface UsingViews2ViewController ()
 
@@ -14,6 +15,8 @@
 
 @implementation UsingViews2ViewController
 
+@synthesize image;
+@synthesize comment;
 @synthesize scrollview;
 @synthesize txtAddress;
 @synthesize txtCity;
@@ -287,6 +290,27 @@
 }
 - (IBAction)btnSnow:(id)sender {
     NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
+}
+
+- (IBAction)btnReview:(id)sender {
+    
+    [PDFRenderer creat_filePath field:comment Photo:image.image];
+    
+    -(NSString*)getPDFFilePath
+    {
+        NSString* fileName = @"New.pdf";
+        
+        NSArray *arrayPaths =
+        NSSearchPathForDirectoriesInDomains(
+                                            NSDocumentDirectory,
+                                            NSUserDomainMask,
+                                            YES);
+        NSString *path = [arrayPaths objectAtIndex:0];
+        NSString* pdfFilePath = [path stringByAppendingPathComponent:fileName];
+        
+        return pdfFilePath;
+    }
+
 }
 
 

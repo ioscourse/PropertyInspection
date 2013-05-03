@@ -8,13 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+#import "PDFRenderer.h"
+
+
 @interface UsingViews2ViewController : UIViewController
-
-
 
     - (IBAction) doneEditing:(id) sender;
  
 
+//Create PDF
+@property (nonatomic, strong) NSString * filePath;
+@property (nonatomic, strong) NSString * oldFilePath;
+@property (nonatomic, strong) NSString * comment;
+@property (nonatomic, strong) UIImage * image;
+-(NSString*)getPDFFilePath;
 
 @property (retain, nonatomic) IBOutlet UITextField *txtAddress;
 @property (retain, nonatomic) IBOutlet UITextField *txtCity;
@@ -106,6 +113,8 @@
 - (IBAction)btnLawn:(id)sender;
 @property (retain, nonatomic) IBOutlet UISegmentedControl *viewSnow;
 - (IBAction)btnSnow:(id)sender;
+
+- (IBAction)btnReview:(id)sender;
 
 
 
