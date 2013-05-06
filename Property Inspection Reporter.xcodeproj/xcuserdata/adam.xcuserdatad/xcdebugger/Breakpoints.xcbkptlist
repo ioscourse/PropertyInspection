@@ -13,7 +13,46 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "34"
          endingLineNumber = "34"
-         landmarkName = "viewSale"
+         landmarkName = "txtSnow"
+         landmarkType = "19">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Property Inspection Reporter/UsingViews2ViewController.m"
+         timestampString = "389499538.261112"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "20"
+         endingLineNumber = "20"
+         landmarkName = "@implementation UsingViews2ViewController"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Property Inspection Reporter/UsingViews2ViewController.m"
+         timestampString = "389499540.530148"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "21"
+         endingLineNumber = "21"
+         landmarkName = "@implementation UsingViews2ViewController"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Property Inspection Reporter/UsingViews2ViewController.m"
+         timestampString = "389503982.540176"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "22"
+         endingLineNumber = "22"
+         landmarkName = "image"
          landmarkType = "19">
       </FileBreakpoint>
       <FileBreakpoint
@@ -21,37 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Property Inspection Reporter/UsingViews2ViewController.m"
-         timestampString = "389299670.917702"
+         timestampString = "389547797.48762"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "297"
-         endingLineNumber = "297"
-         landmarkName = "-btnReview:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Property Inspection Reporter/UsingViews2ViewController.m"
-         timestampString = "389299673.311753"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "298"
-         endingLineNumber = "298"
-         landmarkName = "-btnReview:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Property Inspection Reporter/UsingViews2ViewController.m"
-         timestampString = "389299702.095753"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "300"
-         endingLineNumber = "300"
+         startingLineNumber = "311"
+         endingLineNumber = "311"
          landmarkName = "-btnReview:"
          landmarkType = "5">
       </FileBreakpoint>

@@ -8,6 +8,8 @@
 
 #import "UsingViews2ViewController.h"
 #import "PDFRenderer.h"
+#import <DropboxSDK/DropboxSDK.h>
+
 
 @interface UsingViews2ViewController ()
 
@@ -15,8 +17,12 @@
 
 @implementation UsingViews2ViewController
 
+NSString *files;
+
 @synthesize image;
 @synthesize comment;
+@synthesize filePath;
+
 @synthesize scrollview;
 @synthesize txtAddress;
 @synthesize txtCity;
@@ -71,6 +77,11 @@
 @synthesize viewLawn;
 @synthesize viewSnow;
 
+- (void)didPressLink {
+    if (![[DBSession sharedSession] isLinked]) {
+        [[DBSession sharedSession] linkFromController:self];
+    }
+}
 
 - (void)viewDidLoad
 {
@@ -84,6 +95,7 @@
     [self.view addGestureRecognizer:tap];
 
 }
+
 -(void)dismissKeyboard {
     [txtAddress resignFirstResponder];
     [txtCity resignFirstResponder];
@@ -169,6 +181,8 @@
     
     [super dealloc];
 }
+
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     CGPoint scrollPoint = CGPointMake(0, textField.frame.origin.y);
     [scrollview setContentOffset:scrollPoint animated:YES];
@@ -294,7 +308,7 @@
 
 - (IBAction)btnReview:(id)sender {
     
-    [PDFRenderer creat_filePath field:comment Photo:image.image];
+    [PDFRenderer createPDF:filePath field:comment Photo:image];
     
     -(NSString*)getPDFFilePath
     {
@@ -310,8 +324,19 @@
         
         return pdfFilePath;
     }
+    
+    - (NSString *) filePath: (NSString *) fileName {
+        NSArray *paths =
+        NSSearchPathForDirectoriesInDomains(
+                                            NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDir = [paths objectAtIndex:0];
+        
+        return [documentsDir stringByAppendingPathComponent:fileName];
+    }
+   }
 
-}
+
+
 
 
 @end

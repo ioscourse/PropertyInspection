@@ -7,8 +7,12 @@
 //
 
 #import "UsingViews2AppDelegate.h"
-
+#import <DropboxSDK/DropboxSDK.h>
+#import "PDFRenderer.h"
 @implementation UsingViews2AppDelegate
+
+
+
 
 - (void)dealloc
 {
@@ -18,10 +22,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    DBSession* dbSession =
+    [[[DBSession alloc]
+      initWithAppKey:@"nh1clfa3r0spvyy"
+      appSecret:@"85kxdar8evwm6k2"
+      root:kDBRootDropbox] // either kDBRootAppFolder or kDBRootDropbox
+     autorelease];
+    [DBSession setSharedSession:dbSession];
+     
     // Override point for customization after application launch.
     return YES;
 }
-							
+
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    if ([[DBSession sharedSession] handleOpenURL:url]) {
+        if ([[DBSession sharedSession] isLinked]) {
+            NSLog(@"App linked successfully!");
+            // At this point you can start making API calls
+        }
+        return YES;
+    }
+    // Add whatever other url handling code your app requires here
+    return NO;
+}
+
+
+     
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

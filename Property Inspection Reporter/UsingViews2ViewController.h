@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <DropboxSDK/DropboxSDK.h>
+#import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <CoreLocation/CoreLocation.h>
 #import "PDFRenderer.h"
 
+@class DBRestClient;
 
 @interface UsingViews2ViewController : UIViewController
 
@@ -22,6 +27,9 @@
 @property (nonatomic, strong) NSString * comment;
 @property (nonatomic, strong) UIImage * image;
 -(NSString*)getPDFFilePath;
+
+//dropbox DBrestClient
+@property (nonatomic, readonly) DBRestClient *restClient;
 
 @property (retain, nonatomic) IBOutlet UITextField *txtAddress;
 @property (retain, nonatomic) IBOutlet UITextField *txtCity;
@@ -115,12 +123,6 @@
 - (IBAction)btnSnow:(id)sender;
 
 - (IBAction)btnReview:(id)sender;
-
-
-
-
-
-
 
 
     
