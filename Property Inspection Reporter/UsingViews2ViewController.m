@@ -7,7 +7,7 @@
 //
 
 #import "UsingViews2ViewController.h"
-#import "PDFRenderer.h"
+//#import "PDFRenderer.h"
 #import <DropboxSDK/DropboxSDK.h>
 
 
@@ -18,11 +18,13 @@
 @implementation UsingViews2ViewController
 
 NSString *files;
-
+NSString *getPDFFiles;
 @synthesize image;
 @synthesize comment;
 @synthesize filePath;
-
+@synthesize Photo;
+@synthesize lblCover;
+@synthesize ImageCover;
 @synthesize scrollview;
 @synthesize txtAddress;
 @synthesize txtCity;
@@ -77,6 +79,8 @@ NSString *files;
 @synthesize viewLawn;
 @synthesize viewSnow;
 
+
+
 - (void)didPressLink {
     if (![[DBSession sharedSession] isLinked]) {
         [[DBSession sharedSession] linkFromController:self];
@@ -88,11 +92,14 @@ NSString *files;
    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    
+    imagePicker = [[UIImagePickerController alloc] init];
 
 }
 
@@ -114,6 +121,60 @@ NSString *files;
     [txtMissing resignFirstResponder];
     [txtHazards resignFirstResponder];
     
+}
+
+
+
+- (void) saveImage{
+    //—-get the date from the ImageView—-
+    NSData *imageData =
+    [NSData dataWithData:UIImagePNGRepresentation(Photo.image)];
+    
+    //—-write the date to file—-
+    [imageData writeToFile:[self filePath:@"MyPicture.png"] atomically:YES];
+    
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *image;
+    NSURL *mediaUrl;
+    mediaUrl = (NSURL *)[info valueForKey:
+                         UIImagePickerControllerMediaURL];
+    
+    if (mediaUrl == nil) {
+        image = (UIImage *) [info valueForKey:
+                             UIImagePickerControllerEditedImage];
+        if (image == nil) {
+            //-—-original image selected—--
+            image = (UIImage *)
+            [info valueForKey:UIImagePickerControllerOriginalImage];
+            
+            //—--display the image—--
+            Photo.image = image;
+        }
+        else { //—--edited image picked—-
+            //—--get the cropping rectangle applied to the image—--
+            
+            
+            //—--display the image—--
+            Photo.image = image;
+        }
+        
+        //—-save the image captured—-
+        [self saveImage];
+    }
+    
+    //—--hide the Image Picker—--
+    [picker dismissModalViewControllerAnimated:0];
+    lblCover.hidden=1;
+    ImageCover.hidden=1;
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    //-—-user did not select image; hide the Image Picker—--
+    [picker dismissModalViewControllerAnimated:YES];
 }
 -(IBAction) doneEditing:(id) sender {
     [sender resignFirstResponder];
@@ -302,13 +363,372 @@ NSString *files;
 - (IBAction)btnLawn:(id)sender {
     NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
 }
+- (IBAction)btnphSign:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphLockbox:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphSignin:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphElec:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphGas:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphWater:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphThremo:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphDoors:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphBasement:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphWindows:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphLeaks:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphTennants:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphMold:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphClean:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphTrash:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphViolations:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphAddress:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphLawn:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphSnow:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphMissing:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
+- (IBAction)btnphHazards:(id)sender {
+    imagePicker.delegate = self;
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    NSArray *mediaTypes =
+    [NSArray arrayWithObjects:kUTTypeImage, nil];
+    imagePicker.mediaTypes = mediaTypes;
+    
+    imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    imagePicker.allowsEditing = YES;
+    
+    
+    //—--show the Image Picker—--
+    [self presentModalViewController:imagePicker animated:YES];
+}
+
 - (IBAction)btnSnow:(id)sender {
     NSLog(@"%ld", (long)viewAgencyinfo.selectedSegmentIndex);
 }
 
 - (IBAction)btnReview:(id)sender {
+   
+}
     
-    [PDFRenderer createPDF:filePath field:comment Photo:image];
+    //[[PDFRenderer createPDF:filePath field:comment Photo:image];
     
     -(NSString*)getPDFFilePath
     {
@@ -333,7 +753,7 @@ NSString *files;
         
         return [documentsDir stringByAppendingPathComponent:fileName];
     }
-   }
+   
 
 
 

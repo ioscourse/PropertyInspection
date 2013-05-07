@@ -10,52 +10,6 @@
 
 @implementation PDFRenderer
 
-+(void)drawText:(NSString*)textToDraw inFrame:(CGRect)frame fontName:(NSString *)fontName fontSize:(int) fontSize
-{
-    CFStringRef stringRef = ( CFStringRef)textToDraw;
-    
-    // Prepare the text using a Core Text Framesetter.
-    CTFontRef font = CTFontCreateWithName(( CFStringRef)fontName, fontSize, NULL);
-    CFStringRef keys[] = { kCTFontAttributeName };
-    CFTypeRef values[] = { font };
-    CFDictionaryRef attr = CFDictionaryCreate(NULL, (const void **)&keys, (const void **)&values,
-                                              sizeof(keys) / sizeof(keys[0]), &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
-    CFAttributedStringRef currentText = CFAttributedStringCreate(NULL, stringRef, attr);
-    CTFramesetterRef frameSetter = CTFramesetterCreateWithAttributedString(currentText);
-    
-    CGRect frameRect = (CGRect){frame.origin.x, -1 * frame.origin.y, frame.size};
-    CGMutablePathRef framePath = CGPathCreateMutable();
-    CGPathAddRect(framePath, NULL, frameRect);
-    
-    
-    // Get the frame that will do the rendering.
-    CFRange currentRange = CFRangeMake(0, 0);
-    CTFrameRef frameRef = CTFramesetterCreateFrame(frameSetter, currentRange, framePath, NULL);
-    CGPathRelease(framePath);
-    
-    // Get the graphics context.
-    CGContextRef currentContext = UIGraphicsGetCurrentContext();
-    
-    // Put the text matrix into a known state. This ensures
-    // that no old scaling factors are left in place.
-    CGContextSetTextMatrix(currentContext, CGAffineTransformIdentity);
-    
-    // Core Text draws from the bottom-left corner up, so flip
-    // the current transform prior to drawing.
-    // CGContextTranslateCTM(currentContext, 0, 100);
-    CGContextScaleCTM(currentContext, 1.0, -1.0);
-    
-    // Draw the frame.
-    CTFrameDraw(frameRef, currentContext);
-    
-    // Revert coordinate
-    CGContextScaleCTM(currentContext, 1.0, -1.0);
-    
-    CFRelease(frameRef);
-    CFRelease(stringRef);
-    CFRelease(frameSetter);
-}
-
 +(void)drawLineFromPoint:(CGPoint)from toPoint:(CGPoint)to
 {
     CGContextRef context = UIGraphicsGetCurrentContext();

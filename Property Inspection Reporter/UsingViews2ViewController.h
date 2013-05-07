@@ -12,14 +12,22 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <CoreLocation/CoreLocation.h>
-#import "PDFRenderer.h"
+//#import "PDFRenderer.h"
 
 @class DBRestClient;
 
-@interface UsingViews2ViewController : UIViewController
+@interface UsingViews2ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate,DBRestClientDelegate>
+{
+    UIImagePickerController *imagePicker;
+    DBRestClient *restClient;
+    NSMutableArray *dropboxURLs;
+	IBOutlet UILabel *locLabel;
+    
+}
 
     - (IBAction) doneEditing:(id) sender;
- 
+
+@property (retain, nonatomic) IBOutlet UIImageView *Photo;
 
 //Create PDF
 @property (nonatomic, strong) NSString * filePath;
@@ -120,6 +128,39 @@
 @property (retain, nonatomic) IBOutlet UISegmentedControl *viewLawn;
 - (IBAction)btnLawn:(id)sender;
 @property (retain, nonatomic) IBOutlet UISegmentedControl *viewSnow;
+
+- (IBAction)btnphSign:(id)sender;
+- (IBAction)btnphLockbox:(id)sender;
+- (IBAction)btnphSignin:(id)sender;
+- (IBAction)btnphElec:(id)sender;
+- (IBAction)btnphGas:(id)sender;
+- (IBAction)btnphWater:(id)sender;
+- (IBAction)btnphThremo:(id)sender;
+- (IBAction)btnphDoors:(id)sender;
+- (IBAction)btnphBasement:(id)sender;
+- (IBAction)btnphWindows:(id)sender;
+- (IBAction)btnphLeaks:(id)sender;
+- (IBAction)btnphTennants:(id)sender;
+- (IBAction)btnphMold:(id)sender;
+- (IBAction)btnphClean:(id)sender;
+- (IBAction)btnphTrash:(id)sender;
+- (IBAction)btnphViolations:(id)sender;
+- (IBAction)btnphAddress:(id)sender;
+- (IBAction)btnphLawn:(id)sender;
+- (IBAction)btnphSnow:(id)sender;
+- (IBAction)btnphMissing:(id)sender;
+
+
+@property (retain, nonatomic) IBOutlet UILabel *caption;
+@property (retain, nonatomic) IBOutlet UILabel *lblCover;
+@property (retain, nonatomic) IBOutlet UIImageView *ImageCover;
+
+
+
+
+
+
+
 - (IBAction)btnSnow:(id)sender;
 
 - (IBAction)btnReview:(id)sender;
